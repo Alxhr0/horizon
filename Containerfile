@@ -1,7 +1,7 @@
-FROM ghcr.io/ublue-os/silverblue-main:latest
+#FROM ghcr.io/ublue-os/silverblue-main:latest
 
 ## Other possible base images include:
-# FROM ghcr.io/ublue-os/bazzite:stable
+FROM ghcr.io/ublue-os/bazzite-nvidia:stable
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
 # 
 # ... and so on, here are more base images
