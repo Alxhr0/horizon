@@ -9,8 +9,14 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
+
+wget https://download.opensuse.org/repositories/home:paul4us/Fedora_Rawhide/home:paul4us.repo -P /etc/yum.repos.d
+wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
 # this installs a package from fedora repos
-dnf install -y virt-manager nvtop nu
+dnf install -y virt-manager nvtop nu code klassy kf6-servicemenus-imagetools
 
 # Use a COPR Example:
 #
@@ -21,4 +27,4 @@ dnf install -y virt-manager nvtop nu
 
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
+systemctl enable podman.socket libvirtd
