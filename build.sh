@@ -20,13 +20,12 @@ wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr
 dnf install -y virt-manager virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code klassy kf6-servicemenus-imagetools
 
 # Install XAMPP
+#echo "Installing XAMPP..."
 
-echo "Installing XAMPP..."
-
-wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.12/xampp-linux-x64-8.2.12-0-installer.run
-chmod +x xampp-linux-x64-8.2.12-0-installer.run
-./xampp-linux-x64-8.2.12-0-installer.run --mode unattended --unattendedmodeui minimal --debuglevel 4
-rm xampp-linux-x64-8.2.12-0-installer.run 
+#wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.12/xampp-linux-x64-8.2.12-0-installer.run
+#chmod +x xampp-linux-x64-8.2.12-0-installer.run
+#./xampp-linux-x64-8.2.12-0-installer.run --mode unattended --unattendedmodeui minimal --debuglevel 4
+#rm xampp-linux-x64-8.2.12-0-installer.run 
 
 
 # Use a COPR Example:
