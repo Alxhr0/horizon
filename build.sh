@@ -22,6 +22,9 @@ dnf install -y virt-manager virt-install libvirt-daemon-config-network libvirt-d
 # Dependencies for XAMPP
 dnf install -y libnsl
 
+# Remove unused packages
+dnf remove -y krfb
+
 # Install XAMPP
 #echo "Installing XAMPP..."
 
