@@ -1,0 +1,13 @@
+set allow-duplicate-recipes := true
+set ignore-comments := true
+
+_default:
+    #!/usr/bin/bash
+    source /usr/lib/ujust/libformatting.sh
+
+    just --justfile justfile --list --list-heading $'Available commands:\n' --list-prefix $' - '
+
+
+
+# Imports
+import "./justfiles/00-default.just"
