@@ -1,5 +1,5 @@
 ---
-name: Build Custom Image
+name: Build the non-NVIDIA image
 on:
   pull_request:
     branches:

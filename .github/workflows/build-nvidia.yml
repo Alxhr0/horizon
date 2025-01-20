@@ -1,5 +1,5 @@
 ---
-name: Build Custom Image
+name: Build the NVIDIA image
 on:
   pull_request:
     branches:
@@ -96,7 +96,7 @@ jobs:
           # Syntax: https://docs.github.com/en/actions/learn-github-actions/expressions#format
           image: ${{ env.IMAGE_NAME }}
           build-args: |
-            NVIDIA_FLAVOR=${{ matrix.target_nvidia_flavor }}
+            BASE_IMAGE=bazzite-nvidia
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
           oci: false
