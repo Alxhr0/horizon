@@ -1,0 +1,14 @@
+ARG BASE_IMAGE=bazzite
+FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
+
+COPY files/shared /
+COPY files/cinnamon /
+COPY editions/cinnamon-nvidia/build-cinnamon.sh /tmp/build-cinnamon-nvidia.sh
+COPY scripts/shared/packages.sh /tmp/packages.sh
+
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build-cinnamon-nvidia.sh && \
+    /tmp/packages.sh && \
+    ostree container commit && \
+    bootc container lint
