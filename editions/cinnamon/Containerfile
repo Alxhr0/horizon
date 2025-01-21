@@ -1,9 +1,7 @@
 ARG BASE_IMAGE=bazzite
 FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
 
-COPY build-cinnamon.sh /tmp/build-cinnamon.sh
-
-COPY files/shared /
+COPY ../files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build-cinnamon.sh && \
