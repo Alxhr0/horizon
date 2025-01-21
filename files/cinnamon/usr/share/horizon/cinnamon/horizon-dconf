@@ -13,7 +13,7 @@ delay=15
 image-source='directory:///usr/share/wallpapers'
 
 [desktop/interface]
-cursor-theme='Paper'
+cursor-theme='Bibata-Modern-Ice'
 gtk-theme='Mint-Y-Dark-Purple'
 icon-theme='Mint-Y-Purple'
 
