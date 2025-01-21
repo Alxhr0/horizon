@@ -1,10 +1,14 @@
 ARG BASE_IMAGE=bazzite
 FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
 
-COPY ../files/shared /
+COPY files/shared /
+COPY files/cinnamon /
 COPY editions/cinnamon/build-cinnamon.sh /tmp/build-cinnamon.sh
+COPY scripts/shared/packages.sh /tmp/packages.sh
+
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build-cinnamon.sh && \
+    /tmp/packages.sh && \
     ostree container commit && \
     bootc container lint

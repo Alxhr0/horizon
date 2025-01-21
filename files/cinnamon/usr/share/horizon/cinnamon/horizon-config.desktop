@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Apply Horizon Cinnamon config
+Exec=/usr/share/horizon/cinnamon/apply-dconf.sh
+Comment=Horizon Cinnamon config
+Terminal=false
+TryExec=/usr/share/horizon/cinnamon/apply-dconf.sh
+Type=Application
