@@ -9,7 +9,7 @@ wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr
 #rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:whitehara:kernel-tkg-zen2 kernel
 
 # this installs a package from fedora repos
-dnf install -y klassy kf6-servicemenus-imagetools
+dnf install -y klassy kf6-servicemenus-imagetools konsole
 
 # Dependencies for XAMPP
 dnf install -y libnsl
