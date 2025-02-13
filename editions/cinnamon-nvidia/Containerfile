@@ -4,7 +4,6 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
 COPY files/shared /
 COPY files/cinnamon /
 COPY editions/cinnamon-nvidia/build-cinnamon.sh /tmp/build-cinnamon-nvidia.sh
-COPY files/cinnamon/usr/share/cinnamon/horizon-config.desktop /etc/xdg/autostart
 COPY scripts/shared/packages.sh /tmp/packages.sh
 
 

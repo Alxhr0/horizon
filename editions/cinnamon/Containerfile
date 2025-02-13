@@ -3,7 +3,6 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
 
 COPY files/shared /
 COPY files/cinnamon /
-COPY files/cinnamon/usr/share/cinnamon/horizon-config.desktop /etc/xdg/autostart
 COPY editions/cinnamon/build-cinnamon.sh /tmp/build-cinnamon.sh
 COPY scripts/shared/packages.sh /tmp/packages.sh
 
