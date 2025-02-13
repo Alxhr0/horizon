@@ -1,5 +1,4 @@
-ARG BASE_IMAGE=bazzite
-FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
+FROM quay.io/fedora/fedora-coreos:stable
 
 COPY files/shared /
 COPY files/cinnamon /
