@@ -8,6 +8,6 @@ COPY scripts/shared/packages.sh /tmp/packages.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build-cinnamon.sh && \
-    /tmp/packages.sh && \
+    #/tmp/packages.sh && \
     ostree container commit && \
     bootc container lint
