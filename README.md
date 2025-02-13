@@ -8,7 +8,7 @@ This image is mostly only for me, but it should work for others too.
 
 From Bazzite:
 ```bash
- # Cinnamon
+# Cinnamon
 sudo bootc switch ghcr.io/Alxhr0/horizon-cinnamon:latest 
 
 # Cinnamon-NVIDIA
