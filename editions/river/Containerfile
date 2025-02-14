@@ -1,0 +1,12 @@
+FROM ghcr.io/ublue-os/base-main:latest
+
+COPY files/shared /
+COPY editions/river/build-river.sh /tmp/build-river.sh
+COPY scripts/shared/packages.sh /tmp/packages.sh
+
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build-river.sh && \
+    /tmp/packages.sh && \
+    echo "river" >> /usr/share/horizon/image_type && \
+    ostree container commit
