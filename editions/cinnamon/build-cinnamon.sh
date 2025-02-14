@@ -12,4 +12,8 @@ systemctl enable gdm NetworkManager bluetooth horizon-flatpak-manager
 
 systemctl disable systemd-remount-fs rtkit-daemon
 
+rm /usr/lib/sysusers.d/00-coreos-static.conf /usr/lib/sysusers.d/00-coreos-nobody.conf
+
+systemd-sysusers
+
 cp /usr/share/horizon/cinnamon/horizon-config.desktop /etc/xdg/autostart/horizon-config.desktop
