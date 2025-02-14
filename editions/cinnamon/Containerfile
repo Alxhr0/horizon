@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/ucore:stable
+FROM ghcr.io/ublue-os/main:stable
 
 COPY files/shared /
 COPY files/cinnamon /
