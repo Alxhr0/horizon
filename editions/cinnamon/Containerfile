@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-coreos:stable
+FROM ghcr.io/ublue-os/ucore:stable
 
 COPY files/shared /
 COPY files/cinnamon /
