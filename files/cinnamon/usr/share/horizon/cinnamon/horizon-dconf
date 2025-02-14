@@ -14,8 +14,8 @@ image-source='directory:///usr/share/wallpapers'
 
 [desktop/interface]
 cursor-theme='Bibata-Modern-Ice'
-gtk-theme='Mint-Y-Dark-Purple'
-icon-theme='Mint-Y-Purple'
+gtk-theme='Mint-Y-Dark-Aqua'
+icon-theme='Mint-Y-Aqua'
 
 [desktop/sound]
 event-sounds=false
@@ -43,4 +43,4 @@ night-light-enabled=true
 night-light-last-coordinates=(52.149999999999999, 21.0)
 
 [theme]
-name='Mint-Y-Dark-Purple'
+name='Mint-Y-Dark-Aqua'
