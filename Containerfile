@@ -9,6 +9,6 @@ COPY files/shared /
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     /tmp/packages.sh && \
-    ostree container commit && \
+    ostree container commit
     #bootc container lint
 
