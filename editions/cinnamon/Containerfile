@@ -10,4 +10,4 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build-cinnamon.sh && \
     /tmp/packages.sh && \
     echo "cinnamon" >> /usr/share/horizon/image_type && \
-    ostree container commit &&
+    ostree container commit
