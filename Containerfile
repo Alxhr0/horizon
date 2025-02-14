@@ -1,5 +1,5 @@
 ARG BASE_IMAGE=kinoite-main
-FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
+FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 
 COPY build.sh /tmp/build.sh
 COPY scripts/shared/packages.sh /tmp/packages.sh
