@@ -6,9 +6,9 @@ set -ouex pipefail
 
 #rm /usr/lib/sysusers.d/00-coreos-static.conf /usr/lib/sysusers.d/00-coreos-nobody.conf
 
-rpm-ostree install cinnamon cinnamon-settings-daemon fastfetch flatpak gnome-terminal xorg-x11-server-Xorg file-roller nemo-fileroller nemo-preview nemo-compare gnome-calculator gcolor3 bootc dnf5-plugins gdm glibc-all-langpacks fedora-flathub-remote pavucontrol pulseaudio-utils blueman xed
+dnf -y install cinnamon cinnamon-settings-daemon fastfetch flatpak gnome-terminal xorg-x11-server-Xorg file-roller nemo-fileroller nemo-preview nemo-compare gnome-calculator gcolor3 bootc dnf5-plugins gdm glibc-all-langpacks fedora-flathub-remote pavucontrol pulseaudio-utils blueman xed
 
-rpm-ostree override remove nfs-utils-coreos
+#rpm-ostree override remove nfs-utils-coreos
 
 systemctl enable gdm NetworkManager bluetooth horizon-flatpak-manager
 
