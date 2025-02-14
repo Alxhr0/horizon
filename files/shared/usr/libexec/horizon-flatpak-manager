@@ -67,9 +67,9 @@ else
 fi
 
 
-if grep -g "cinnamon" /usr/share/horizon/image_type; then
+if grep -q "cinnamon" /usr/share/horizon/image_type; then
     xargs -a /usr/share/horizon/cinnamon/packages/flatpaks flatpak install --system -y
-elif grep -g "plasma" /usr/share/horizon/image_type; then
+elif grep -q "plasma" /usr/share/horizon/image_type; then
     xargs -a /usr/share/horizon/plasma/packages/flatpaks flatpak install --system -y
 fi
 
