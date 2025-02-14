@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=bazzite
+ARG BASE_IMAGE=kinoite-main
 FROM ghcr.io/ublue-os/${BASE_IMAGE}:stable
 
 COPY build.sh /tmp/build.sh
@@ -10,5 +10,5 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     /tmp/packages.sh && \
     ostree container commit && \
-    bootc container lint
+    #bootc container lint
 
