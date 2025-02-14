@@ -5,6 +5,8 @@
 flatpak remote-add --if-not-exists --system flathub /etc/flatpak/remotes.d/flathub.flatpakrepo
 flatpak remote-modify --system --enable flathub
 
+flatpak remote-remove fedora -y
+
 
 # Flatpak theming support
 flatpak override \
@@ -68,8 +70,8 @@ fi
 
 
 if grep -q "cinnamon" /usr/share/horizon/image_type; then
-    xargs -a /usr/share/horizon/cinnamon/packages/flatpaks flatpak install --system -y
+    xargs -a /usr/share/horizon/cinnamon/packages/flatpaks flatpak install flathub  --system -y
 elif grep -q "plasma" /usr/share/horizon/image_type; then
-    xargs -a /usr/share/horizon/plasma/packages/flatpaks flatpak install --system -y
+    xargs -a /usr/share/horizon/plasma/packages/flatpaks flatpak install flathub --system -y
 fi
 
