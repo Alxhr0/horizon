@@ -6,6 +6,8 @@ set -ouex pipefail
 
 rpm-ostree install cinnamon cinnamon-settings-daemon flatpak gnome-terminal xorg-x11-server-Xorg file-roller nemo-fileroller nemo-preview nemo-compare gnome-calculator gcolor3 bootc dnf5-plugins sddm glibc-all-langpacks fedora-flathub-remote pavucontrol pulseaudio-utils blueman xedit
 
+rpm-ostree override remove nfs-utils-coreos
+
 systemctl enable sddm NetworkManager bluetooth horizon-flatpak-manager
 
 systemctl disable systemd-remount-fs rtkit-daemon
