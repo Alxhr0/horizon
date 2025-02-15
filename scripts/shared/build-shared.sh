@@ -31,7 +31,7 @@ rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedor
 rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 dnf5 -y install intel-media-driver
 rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld
-rpm-ostree override remove mesa-vdpau-drivers --install mesa-vdpau-drivers-freeworld
+dnf5 -y install mesa-vdpau-drivers-freeworld
 
 
 systemctl enable podman.socket libvirtd horizon-flatpak-manager
