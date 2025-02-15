@@ -17,6 +17,10 @@ dnf install -y libnsl
 # Remove unused packages
 dnf remove -y krfb krfb-libs
 
+dnf5 -y copr enable sentry/kernel-blu
+
+rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-fsync' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+
 # Install XAMPP
 #echo "Installing XAMPP..."
 
