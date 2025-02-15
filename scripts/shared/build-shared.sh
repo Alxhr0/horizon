@@ -36,6 +36,7 @@ packages=(
   mesa-libGL
   mesa-vulkan-drivers
   mesa-dri-drivers
+  mesa-vdpau-drivers
 )
 
 for pkg in "${packages[@]}"; do
@@ -45,7 +46,6 @@ done
 
 rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 dnf5 -y install intel-media-driver
-dnf5 -y install mesa-vdpau-drivers
 
 # Packages
 dnf5 -y install just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
