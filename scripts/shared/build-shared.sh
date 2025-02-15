@@ -28,7 +28,9 @@ dnf5 -y remove firefox firefox-langpacks
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
 # Codecs
-rpm-ostree override replace --experimental --from repo="terra-extras" mesa-filesystem mesa-libgbm mesa-libglapi mesa-libEGL mesa-libGL mesa-vulkan-drivers 
+sed -i '10s/enabled=1/enabled=0/' /etc/yum.repos.d/terra-mesa.repo 
+
+rpm-ostree override replace --experimental --from repo="terra-mesa" mesa-filesystem mesa-libgbm mesa-libglapi mesa-libEGL mesa-libGL mesa-vulkan-drivers mesa-dri-drivers
 
 rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 dnf5 -y install intel-media-driver
