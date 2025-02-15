@@ -30,7 +30,27 @@ rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedor
 # Codecs
 sed -i '10s/enabled=1/enabled=0/' /etc/yum.repos.d/terra-mesa.repo 
 
-rpm-ostree override replace --experimental --from repo="terra-mesa" mesa-filesystem mesa-libgbm mesa-libglapi mesa-libEGL mesa-libGL mesa-vulkan-drivers mesa-dri-drivers
+packages=(
+  mesa-filesystem
+  mesa-libgbm
+  mesa-libglapi
+  mesa-libEGL
+  mesa-libGL
+  mesa-vulkan-drivers
+  mesa-dri-drivers
+  mesa-filesystem
+  mesa-libgbm
+  mesa-libglapi
+  mesa-libEGL
+  mesa-libGL
+  mesa-vulkan-drivers
+  mesa-dri-drivers
+)
+
+for pkg in "${packages[@]}"; do
+  dnf5 -y swap $pkg $pkg
+done
+
 
 rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 dnf5 -y install intel-media-driver
