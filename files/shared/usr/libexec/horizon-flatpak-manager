@@ -69,9 +69,8 @@ else
 fi
 
 
-if grep -q "cinnamon" /usr/share/horizon/image_type; then
-    xargs -a /usr/share/horizon/packages/cinnamon_flatpaks flatpak install flathub  --system -y
-elif grep -q "plasma" /usr/share/horizon/image_type; then
-    xargs -a /usr/share/horizon/packages/flatpaks flatpak install flathub --system -y
+if grep -q "kinoite" /usr/share/horizon/image_type; then
+    xargs -a /usr/share/horizon/packages/kinoite_flatpaks flatpak install flathub  --system -y
+    xargs -a /usr/share/horizon/packages/kinoite_flatpak_remove flatpak remove -y
 fi
 

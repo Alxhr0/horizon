@@ -1,5 +1,5 @@
 ---
-name: Build the non-NVIDIA image
+name: Build the non-NVIDIA Kinoite Image
 on:
   pull_request:
     branches:
@@ -91,7 +91,7 @@ jobs:
         uses: redhat-actions/buildah-build@v2
         with:
           containerfiles: |
-            ./Containerfile
+            ./editions/kinoite/Containerfile
           # Postfix image name with -custom to make it a little more descriptive
           # Syntax: https://docs.github.com/en/actions/learn-github-actions/expressions#format
           image: ${{ env.IMAGE_NAME }}
