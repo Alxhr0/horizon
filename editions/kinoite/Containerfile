@@ -4,6 +4,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 COPY editions/kinoite/build.sh /tmp/build.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 
+RUN rm /etc/os-release
+
 COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \

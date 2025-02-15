@@ -1,0 +1,37 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "size": {
+      "ndigits": 0,
+      "maxPrefix": "MB"
+    }
+  },
+
+  "logo": {
+    "source": "/usr/share/horizon/fastfetch/ascii-art"
+  },
+  
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "de",
+    "wm",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    {
+     "type": "command",
+     "key": "System Age",
+     "text": "hourglass"
+    },
+    "break",
+    "colors"
+  ]
+}
