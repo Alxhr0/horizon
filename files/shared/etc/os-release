@@ -1,8 +1,8 @@
 NAME="Horizon Linux"
 VERSION="(Kinoite)"
 RELEASE_TYPE=stable
-ID=horizon
-ID_LIKE="fedora"
+ID=fedora
+ID_LIKE="horizon"
 VERSION_ID=41
 VERSION_CODENAME=""
 PLATFORM_ID="platform:f41"
@@ -13,4 +13,4 @@ HOME_URL="https://github.com/alxhr0/horizon"
 VARIANT="Kinoite"
 VARIANT_ID=kinoite
 OSTREE_VERSION='41.20250214.0'
-BOOTLOADER_NAME="Horizon(F41.20250210)"
+BOOTLOADER_NAME="Horizon (F41.20250210)"
