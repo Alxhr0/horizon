@@ -2,7 +2,7 @@
 
 
 # Ensure Flathub is enabled
-flatpak remote-add --if-not-exists --system flathub /etc/flatpak/remotes.d/flathub.flatpakrepo
+flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-modify --system --enable flathub
 
 flatpak remote-remove fedora -y
