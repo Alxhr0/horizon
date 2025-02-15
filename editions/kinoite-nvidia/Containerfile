@@ -2,12 +2,12 @@ ARG BASE_IMAGE=kinoite-main
 FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 
 COPY editions/kinoite-nvidia/build.sh /tmp/build.sh
-COPY scripts/shared/packages.sh /tmp/packages.sh
+COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 
 COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/packages.sh && \
+    /tmp/build-shared.sh && \
     /tmp/build.sh && \
     echo "kinoite" >> /usr/share/horizon/image_type && \
     ostree container commit
