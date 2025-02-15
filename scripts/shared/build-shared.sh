@@ -17,7 +17,7 @@ dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedo
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # Codecs
-dnf5 -y install terra-extras-release
+dnf5 -y install terra-release-extras
 
 sed -i '10s/enabled=1/enabled=0/' /etc/yum.repos.d/terra-mesa.repo 
 
