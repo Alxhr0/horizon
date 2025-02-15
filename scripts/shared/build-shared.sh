@@ -13,10 +13,10 @@ wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr
 dnf5 -y copr enable peterwu/rendezvous
 dnf5 -y copr enable sentry/kernel-blu
 dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
+dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-steam.repo &&
 
 # Packages
-dnf -y install bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
+dnf -y install steam bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
 
 dnf -y remove firefox firefox-langpacks
 
