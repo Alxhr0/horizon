@@ -8,7 +8,7 @@
   },
 
   "logo": {
-    "source": "/usr/share/horizon/fastfetch/ascii-art"
+    "source": "/usr/share/horizon/configs/fastfetch/ascii-art"
   },
   
   "modules": [
