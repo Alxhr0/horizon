@@ -17,6 +17,8 @@ dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedo
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # Codecs
+dnf5 -y install terra-extras-release
+
 sed -i '10s/enabled=1/enabled=0/' /etc/yum.repos.d/terra-mesa.repo 
 
 packages=(
@@ -46,7 +48,7 @@ dnf5 -y install intel-media-driver
 dnf5 -y install mesa-vdpau-drivers
 
 # Packages
-dnf5 -y install just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code terra-release-extras
+dnf5 -y install just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
 
 # Steam
 dnf5 -y --setopt=install_weak_deps=False install steam
