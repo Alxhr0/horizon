@@ -27,5 +27,8 @@ dnf5 -y remove firefox firefox-langpacks
 # Kernel BLU
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
+# Codecs
+rpm-ostree override replace --experimental ffmpeg-free ffmpeg
+
 
 systemctl enable podman.socket libvirtd horizon-flatpak-manager
