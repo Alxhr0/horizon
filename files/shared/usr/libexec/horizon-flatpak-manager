@@ -71,7 +71,6 @@ fi
 
 if grep -q "kinoite" /usr/share/horizon/image_type; then
     xargs -a /usr/share/horizon/packages/kinoite_flatpaks flatpak install flathub  --system -y
-    flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 )
     xargs -a /usr/share/horizon/packages/kinoite_flatpak_remove flatpak remove -y
 fi
 
