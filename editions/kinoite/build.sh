@@ -9,7 +9,7 @@ wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr
 #rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:whitehara:kernel-tkg-zen2 kernel
 
 # this installs a package from fedora repos
-dnf install -y kf6-servicemenus-imagetools konsole
+dnf5 install -y kf6-servicemenus-imagetools konsole
 
 # Remove unused packages
-dnf remove -y krfb krfb-libs
+dnf5 remove -y krfb krfb-libs
