@@ -6,7 +6,7 @@ This image is mostly only for me, but it should work for others too.
 
 ### Rebase
 
-From Bazzite:
+From Silverblue/Kinoite/any:
 ```bash
 # KDE Plasma NVIDIA
 sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon-nvidia:latest
