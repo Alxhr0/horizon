@@ -1,5 +1,5 @@
 dbox-ubuntu:
-#!/usr/bin/env bash
+	#!/usr/bin/env bash
 	distrobox-create --image quay.io/toolbx/ubuntu-toolbox:latest --name ubuntu
 
 dbox-ubuntu-with-packages:
