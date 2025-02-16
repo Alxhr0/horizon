@@ -2,4 +2,4 @@
 
 set -ouex pipefail
 
-dnf5 -y remove sway waybar foot firefox firefox-langpack sddm
+dnf5 -y install fastfetch
