@@ -1,4 +1,7 @@
-# Horizon
+![Horizon logo](./files/shared/usr/share/plymouth/themes/spinner/watermark.png)<br>
+**Where the Known Meets the Unknowable.**
+
+---
 
 ### Info
 This image is mostly only for me, but it should work for others too.
