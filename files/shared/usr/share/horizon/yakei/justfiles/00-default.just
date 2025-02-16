@@ -40,4 +40,4 @@ install-nix:
 
 
 update-system:
-    sudo rpm-ostree update
+    sudo bootc upgrade
