@@ -1,0 +1,107 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: horizon
+# description will be included in the image's metadata
+description: Kinoite image with funky stuff
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: quay.io/fedora-ostree-desktops/kinoite
+image-version: 41 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: files/kinoite
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+      - source: files/shared
+        destination: /
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://negativo17.org/repos/fedora-steam.repo
+      - https://download.opensuse.org/repositories/home:paul4us/Fedora_Rawhide/home:paul4us.repo
+      - https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo
+      - https://packages.microsoft.com/yumrepos/vscode/config.repo
+    keys:
+      - https://packages.microsoft.com/keys/microsoft.asc
+    replace:
+      - from-repo: https://copr.fedorainfracloud.org/coprs/sentry/kernel-blu/repo/fedora-41/sentry-kernel-blu-fedora-41.repo
+      packages:
+        - kernel
+        - kernel-core
+        - kernel-modules
+        - kernel-modules-extra
+        - kernel-modules-core
+      - from-repo: rpmfusion-free.repo
+      packages:
+        - ffmpeg
+    install:
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-41.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-41.noarch.rpm
+      - neovim
+      - starship
+      - code
+      - steam
+      - virt-manager
+      - fastfetch
+      - aria2
+      - virt-install
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - qemu-kvm
+      - virt-viewer
+      - libguestfs-tools
+      - python3-libguestfs
+      - virt-top
+      - swtpm
+      - edk2-ovmf
+      - nvtop
+      - nu
+      - just
+      - kf6-servicemenus-imagetools 
+      - konsole 
+      - akmod-nvidia 
+      - xorg-x11-drv-nvidia-cuda 
+      - kate
+    remove:
+      - firefox
+      - firefox-langpacks
+
+  - type: systemd
+    system:
+      enabled:
+        - libvirtd
+        - podman
+    user:
+      enabled:
+        - horizon-theme-manager.serivce
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      install:
+        - app.zen_browser.zen
+        - org.kde.isoimagewriter
+        - io.github.vikdevelop.SaveDesktop
+        - org.freedesktop.Platform.VulkanLayer.MangoHud
+        - org.freedesktop.Platform.VulkanLayer.vkBasalt
+        - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
+        - com.obsproject.Studio.Plugin.OBSVkCapture
+        - com.obsproject.Studio.Plugin.Gstreamer
+        - com.obsproject.Studio.Plugin.GStreamerVaapi
+        - org.gtk.Gtk3theme.Breeze
+      remove:
+        - org.kde.kmahjongg
+        - org.kde.kolourpaint
+        - org.kde.krdc
+        - org.kde.skanpage
+        - org.kde.kmines
+    user: {} # Also add Flathub user repo, but no user packages
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
