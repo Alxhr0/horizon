@@ -70,7 +70,17 @@ fi
 
 
 if grep -q "kinoite" /usr/share/horizon/image_type; then
+    flatpaks_to_remove="/usr/share/horizon/packages/kinoite_flatpaks_remove"
+
     xargs -a /usr/share/horizon/packages/kinoite_flatpaks flatpak install flathub  --system -y
-    xargs -a /usr/share/horizon/packages/kinoite_flatpak_remove flatpak remove -y
+    
+    while IFS= read -r app; do
+        if flatpak list --app | awk '{print $1}' | grep -qx "$app"; then
+            echo "Removing $app..."
+            flatpak remove -y --system "$app"
+        else
+            echo "$app is not installed, skipping..."
+        fi
+    done < "$flatpaks_to_remove"
 fi
 
