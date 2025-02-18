@@ -9,4 +9,4 @@ dnf5 -y remove plasma-workspace-common plasma-breeze-common kde-settings-plasma 
 
 dnf5 -y install fastfetch htop btop
 
-systemctl set-target graphical.target
+systemctl set-default graphical.target
