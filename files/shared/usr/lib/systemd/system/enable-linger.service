@@ -1,0 +1,10 @@
+Description=Enable lingering for all users
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'for user in $(ls /home); do loginctl enable-linger $user; done'
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
