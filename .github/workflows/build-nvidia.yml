@@ -11,6 +11,8 @@ on:
       - main
     paths-ignore:
       - '**/README.md'
+      - 'editions/base'
+      - 'editions/kinoite'
   workflow_dispatch:
 
 env:
