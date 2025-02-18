@@ -1,5 +1,6 @@
 [Unit]
 Description=Manage system theme
+ConditionUser=!@system
 
 [Service]
 Type=oneshot
