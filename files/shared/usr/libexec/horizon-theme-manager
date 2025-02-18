@@ -10,3 +10,5 @@ case "$image_type" in
         plasma-apply-wallpaperimage /usr/share/horizon/wallpapers/space.png
         ;;
 esac
+
+systemctl --user disable horizon-theme-manager
