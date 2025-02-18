@@ -1,10 +1,11 @@
 [Unit]
 Description=Manage system theme
 ConditionUser=!@system
+After=plasma-plasmashell.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/libexec/horizon-theme-manager
+ExecStart=/usr/bin/nebula -t
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0

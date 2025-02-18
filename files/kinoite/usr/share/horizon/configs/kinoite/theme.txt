@@ -1,0 +1,3 @@
+theme: AshyDecay
+icons: Bibata-Modern-Ice
+wallpaper: /usr/share/horizon/wallpapers/space.jpeg
