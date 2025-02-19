@@ -7,6 +7,7 @@ COPY editions/base/build.sh /tmp/build.sh
 #COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 
 COPY files/shared /
+COPY files/base /
 
 RUN mkdir -p /var/lib/alternatives && \
 #    /tmp/build-shared.sh && \

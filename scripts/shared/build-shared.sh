@@ -48,7 +48,7 @@ rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfil
 dnf5 -y install intel-media-driver
 
 # Packages
-dnf5 -y install just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
+dnf5 -y install nebula-manager just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
 
 # Steam
 dnf5 -y --setopt=install_weak_deps=False install steam

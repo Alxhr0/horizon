@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Add missing users
+Before=gdm.service
+Before=sddm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nebula -f
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
