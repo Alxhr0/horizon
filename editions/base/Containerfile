@@ -1,7 +1,7 @@
 #ARG BASE_IMAGE=kinoite-main
 #FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
-FROM quay.io/fedora-ostree-desktops/kinoite:41
-
+#FROM quay.io/fedora-ostree-desktops/kinoite:41
+FROM quay.io/fedora/fedora-bootc:41
 
 COPY editions/base/build.sh /tmp/build.sh
 #COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
