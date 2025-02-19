@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+dnf5 -y install wget dnf5-plugins
+
 wget https://download.opensuse.org/repositories/home:paul4us/Fedora_Rawhide/home:paul4us.repo -P /etc/yum.repos.d
 wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
 
