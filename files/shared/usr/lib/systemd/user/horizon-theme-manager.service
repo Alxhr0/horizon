@@ -1,6 +1,7 @@
 [Unit]
 Description=Manage system theme
 ConditionUser=!@system
+Wants=plasma-plasmashell.service
 After=plasma-plasmashell.service
 
 [Service]
