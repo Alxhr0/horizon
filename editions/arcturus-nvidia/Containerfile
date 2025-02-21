@@ -10,7 +10,7 @@ COPY files/arcturus /
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build-shared.sh && \
     /tmp/build.sh && \
-    /tmp/build-nvidia.sh &&
+    /tmp/build-nvidia.sh && \
     echo "arcturus_arcturus" >> /usr/share/horizon/image_type && \
     ostree container commit
     #bootc container lint
