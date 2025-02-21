@@ -1,6 +1,6 @@
 FROM quay.io/fedora-ostree-desktops/kinoite:41
 
-COPY editions/kinoite-nvidia/build.sh /tmp/build.sh
+COPY editions/aster-nvidia/build.sh /tmp/build.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 
 COPY files/shared /
