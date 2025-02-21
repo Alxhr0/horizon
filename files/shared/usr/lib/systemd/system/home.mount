@@ -1,0 +1,9 @@
+[Unit]
+After=mkdir-rootfs@home.service
+Wants=mkdir-rootfs@home.service
+Before=snapd.socket[Mount]
+What=/var/home
+Where=/home
+Options=bind
+Type=none[Install]
+WantedBy=snapd.socket

@@ -1,7 +1,8 @@
 FROM quay.io/fedora-ostree-desktops/silverblue:41
 
-COPY editions/arcturus-nvidia/build.sh /tmp/build.sh
+COPY editions/arcturus-nvidia/build.sh /tmp/build-nvidia.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
+COPY editions/arcturus/build.sh /tmp/build.sh
 
 COPY files/shared /
 COPY files/arcturus /
@@ -9,6 +10,7 @@ COPY files/arcturus /
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build-shared.sh && \
     /tmp/build.sh && \
+    /tmp/build-nvidia.sh &&
     echo "arcturus_arcturus" >> /usr/share/horizon/image_type && \
     ostree container commit
     #bootc container lint

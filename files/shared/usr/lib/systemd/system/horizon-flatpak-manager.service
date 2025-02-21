@@ -8,7 +8,6 @@ Type=oneshot
 ExecStart="/bin/sh -c '/usr/bin/nebula flatpaks-install ; /usr/bin/nebula flatpaks-remove'"
 Restart=on-failure
 RestartSec=30
-StartLimitInterval=0
 
 [Install]
 WantedBy=multi-user.target

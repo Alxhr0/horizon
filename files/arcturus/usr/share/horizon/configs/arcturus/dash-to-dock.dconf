@@ -1,0 +1,14 @@
+[/]
+always-center-icons=false
+apply-custom-theme=false
+background-opacity=0.80000000000000004
+dash-max-icon-size=41
+dock-fixed=true
+dock-position='LEFT'
+extend-height=true
+height-fraction=0.90000000000000002
+preferred-monitor=-2
+preferred-monitor-by-connector='eDP-1'
+running-indicator-style='DASHES'
+show-mounts=false
+show-trash=false
