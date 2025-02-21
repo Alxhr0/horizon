@@ -11,9 +11,15 @@ This image is mostly only for me, but it should work for others too.
 
 From Silverblue/Kinoite/any:
 ```bash
-# KDE Plasma NVIDIA
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon-nvidia:latest
+# Aster NVIDIA (KDE Plasma)
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon-aster-nvidia:latest
 
-# KDE Plasma 
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon:latest
+# Aster (KDE Plasma) 
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon-aster:latest
+
+# Arcturus NVIDIA (GNOME)
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon-arcturus-nvidia:latest
+
+# Arcturus (GNOME) 
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/alxhr0/horizon-arcturus:latest
 ```

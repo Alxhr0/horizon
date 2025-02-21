@@ -1,0 +1,16 @@
+NAME="Horizon Linux"
+VERSION="Arcturus"
+RELEASE_TYPE=stable
+ID=fedora
+ID_LIKE="horizon"
+VERSION_ID=41
+VERSION_CODENAME=""
+PLATFORM_ID="platform:f41"
+PRETTY_NAME="Horizon 41 (Arcturus)"
+ANSI_COLOR="0;38;2;60;110;180"
+LOGO=horizon-logo
+HOME_URL="https://github.com/alxhr0/horizon"
+VARIANT="Arcturus"
+VARIANT_ID=Arcturus
+OSTREE_VERSION='41.20250214.0'
+BOOTLOADER_NAME="Horizon (Arcturus)"

@@ -1,0 +1,10 @@
+app/app.zen_browser.zen/x86_64/stable
+app/io.github.vikdevelop.SaveDesktop/x86_64/stable
+runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
+runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08
+runtime/org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/23.08
+runtime/com.obsproject.Studio.Plugin.OBSVkCapture/x86_64/stable
+runtime/com.obsproject.Studio.Plugin.Gstreamer/x86_64/stable
+runtime/com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable
+app/com.usebottles.bottles/x86_64/stable
+app/org.mozilla.Thunderbird/x86_64/stable

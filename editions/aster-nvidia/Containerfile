@@ -1,0 +1,15 @@
+FROM quay.io/fedora-ostree-desktops/kinoite:41
+
+COPY editions/kinoite-nvidia/build.sh /tmp/build.sh
+COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
+
+COPY files/shared /
+COPY files/aster /
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build-shared.sh && \
+    /tmp/build.sh && \
+    echo "aster_nvidia" >> /usr/share/horizon/image_type && \
+    ostree container commit
+    #bootc container lint
+

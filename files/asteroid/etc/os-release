@@ -1,0 +1,16 @@
+NAME="Horizon Linux"
+VERSION="Asteroid"
+RELEASE_TYPE=stable
+ID=fedora
+ID_LIKE="horizon"
+VERSION_ID=41
+VERSION_CODENAME="Asteroid"
+PLATFORM_ID="platform:f41"
+PRETTY_NAME="Horizon 41 (Asteroid)"
+ANSI_COLOR="0;38;2;60;110;180"
+LOGO=horizon-logo
+HOME_URL="https://github.com/alxhr0/horizon"
+VARIANT="Asteroid"
+VARIANT_ID=Asteroid
+OSTREE_VERSION='41.20250214.0'
+BOOTLOADER_NAME="Horizon (Asteroid)"

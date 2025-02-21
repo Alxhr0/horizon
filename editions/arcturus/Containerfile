@@ -1,0 +1,15 @@
+FROM quay.io/fedora-ostree-desktops/silverblue:41
+
+COPY editions/arcturus/build.sh /tmp/build.sh
+COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
+
+COPY files/shared /
+COPY files/arcturus /
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build-shared.sh && \
+    /tmp/build.sh && \
+    echo "arcturus" >> /usr/share/horizon/image_type && \
+    ostree container commit
+    #bootc container lint
+

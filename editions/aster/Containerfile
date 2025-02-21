@@ -1,0 +1,18 @@
+#ARG BASE_IMAGE=kinoite-main
+#FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
+FROM quay.io/fedora-ostree-desktops/kinoite:41
+
+
+COPY editions/kinoite/build.sh /tmp/build.sh
+COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
+
+COPY files/shared /
+COPY files/aster /
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build-shared.sh && \
+    /tmp/build.sh && \
+    echo "aster" >> /usr/share/horizon/image_type && \
+    ostree container commit
+    #bootc container lint
+

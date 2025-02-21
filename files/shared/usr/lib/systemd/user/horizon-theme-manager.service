@@ -1,12 +1,11 @@
 [Unit]
 Description=Manage system theme
 ConditionUser=!@system
-Wants=plasma-plasmashell.service
-After=plasma-plasmashell.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/nebula -t
+ExecStartPre=/bin/bash -c 'while [ -z "$DISPLAY" ]; do sleep 1; done'
+ExecStart=/usr/bin/nebula theme-manager --theme "AshyDecay" --icons "Tela-dark" --cursor "Bibata-Modern-Ice" --wallpaper "/usr/share/horizon/wallpapers/space.png"
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0
