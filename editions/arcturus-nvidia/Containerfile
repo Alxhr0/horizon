@@ -1,6 +1,6 @@
 FROM quay.io/fedora-ostree-desktops/silverblue:41
 
-COPY editions/arcturus-nvidia/build.sh /tmp/build-nvidia.sh
+COPY editions/arcturus-nvidia/build-nvidia.sh /tmp/build-nvidia.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY editions/arcturus/build.sh /tmp/build.sh
 
