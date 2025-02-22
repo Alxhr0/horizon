@@ -5,7 +5,8 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart="/bin/sh -c '/usr/bin/nebula flatpaks-install ; /usr/bin/nebula flatpaks-remove'"
+ExecStartPre=/usr/bin/nebula flatpaks-remove
+ExecStart=/usr/bin/nebula flatpaks-install
 Restart=on-failure
 RestartSec=30
 
