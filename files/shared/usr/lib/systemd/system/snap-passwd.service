@@ -1,0 +1,12 @@
+[Unit]
+Description=Change /var/home to /home for snapd in passwd
+Before=snapd.socket
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/snap-passwd.sh
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

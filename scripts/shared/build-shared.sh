@@ -48,7 +48,7 @@ rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfil
 dnf5 -y install intel-media-driver
 
 # Packages
-dnf5 -y install snapd nebula-manager just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
+dnf5 -y install snapd eza bat nebula-manager just hourglass bibata-cursor-themes virt-manager fastfetch aria2 virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
 
 # Steam
 dnf5 -y --setopt=install_weak_deps=False install steam
@@ -60,5 +60,5 @@ dnf5 -y remove firefox firefox-langpacks
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
 
-systemctl enable podman.socket libvirtd horizon-flatpak-manager snap.mount snap-symlink mkdir-rootfs home.mount
+systemctl enable snap-passwd snapd podman.socket libvirtd horizon-flatpak-manager snap.mount snap-symlink mkdir-rootfs home.mount
 systemctl --global enable horizon-theme-manager

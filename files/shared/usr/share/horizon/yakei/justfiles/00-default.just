@@ -40,4 +40,9 @@ install-nix:
 
 
 update-system:
-    sudo bootc upgrade
+    #!/usr/bin/env bash
+    echo "Trying to update user packages.."
+    nebula update-system
+
+    echo "Trying to update the system.."
+    sudo nebula update-system

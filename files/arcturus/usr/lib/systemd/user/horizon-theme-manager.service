@@ -4,7 +4,7 @@ ConditionUser=!@system
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/nebula theme-manager --theme "AshyDecay" --icons "Tela-dark" --cursor "Bibata-Modern-Ice" --wallpaper "/usr/share/horizon/wallpapers/space.png"
+ExecStart=/usr/bin/nebula theme-manager --theme "adw-gtk3" --icons "Adwaita" --cursor "Bibata-Modern-Ice" --wallpaper "/usr/share/horizon/wallpapers/space.png"
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0

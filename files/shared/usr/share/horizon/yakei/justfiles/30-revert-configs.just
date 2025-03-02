@@ -1,2 +1,2 @@
 disable-fastfetch-alias:
-    sudo sed -i '5s/^/#/' /etc/profile.d/horizon-aliases.sh
+    sudo sed -i '7s/^/#/' /etc/profile.d/horizon-aliases.sh
