@@ -60,5 +60,5 @@ dnf5 -y remove firefox firefox-langpacks
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
 
-systemctl enable snap-passwd snapd podman.socket libvirtd horizon-flatpak-manager snap-symlink mkdir-rootfs
+systemctl enable podman.socket libvirtd horizon-flatpak-manager
 systemctl --global enable horizon-theme-manager
