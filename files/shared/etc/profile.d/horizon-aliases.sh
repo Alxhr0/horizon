@@ -4,4 +4,6 @@
 
 alias ls="eza"
 alias cat="bat -p"
-alias fastfetch="/usr/bin/fastfetch --config /usr/share/horizon/configs/fastfetch/config.jsonc"
+unalias hyfetch
+
+#alias fastfetch="/usr/bin/fastfetch --config /usr/share/horizon/configs/fastfetch/config.jsonc"
